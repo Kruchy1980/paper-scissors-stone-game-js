@@ -31,11 +31,11 @@ const gameSummary = {
 
 // Actual game data object
 const game = {
-    playerHand: '', // what the user choose
-    aiHand: '', //what the ai choose
-    // playerHandHTML: '', // image border when choosen - not used with separate variable but will leave it as a possibility
-}
-// get to variable our images
+        playerHand: '', // what the user choose
+        aiHand: '', //what the ai choose
+        // playerHandHTML: '', // image border when choosen - not used with separate variable but will leave it as a possibility
+    }
+    // get to variable our images
 const hands = [...document.querySelectorAll('.image-container img')]; //get the only images from image container separatly each image will be choosen convered to array thanks to squar brackets -  it is no need to get the array but we need to remember that array has more methodes.
 
 // Functions
@@ -55,7 +55,7 @@ const handSelection = (e) => {
     hands.forEach(element => element.style.boxShadow = '');
     e.currentTarget.style.boxShadow = '0 0 0 4px #659916';
     // set the main information of  weapon choice
-    info.innerHTML = `You have choosen ${game.playerHand}`;
+    info.innerHTML = `Wybrałeś ${game.playerHand}`;
     // Color of information about player Choose
     info.style.color = ' #7e067e';
 }
@@ -93,7 +93,7 @@ function checkResult(player, ai) {
         return winner.textContent = 'Remis';
     }
     //user winner condition
-    else if ((player === 'paper' && ai === 'stone') || (player === 'stoe' && ai === 'scissors') || (player === 'scissons' && ai === 'paper')) {
+    else if ((player === 'papier' && ai === 'kamień') || (player === 'kamień' && ai === 'nożyczki') || (player === 'nożyczki' && ai === 'papier')) {
         // some  styling of result
         winner.style.fontWeight = 'bold';
         winner.style.color = '#00ff00';
@@ -103,7 +103,7 @@ function checkResult(player, ai) {
     else {
         winner.style.fontWeight = 'bold';
         winner.style.color = '#ff0000';
-        return winner.textContent = 'Won!';
+        return winner.textContent = 'Lost!';
     }
 }
 //4 Function which will publish the statistic of game and choices of 
@@ -143,7 +143,7 @@ function publishResult(player, ai, result) {
         return winResult.textContent = ++gameSummary.wins;
         // here we can use data-summary to tell who has won
         //loose
-    } else if (result === 'Won!') {
+    } else if (result === 'Lost!') {
         whoWin.textContent = 'Tym razem dałeś fory komputerowi';
         return lossResult.textContent = ++gameSummary.losses;
     }
