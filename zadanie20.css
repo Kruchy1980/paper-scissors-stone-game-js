@@ -1,0 +1,95 @@
+/* font-family: 'Roboto', sans-serif; */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* Here we can paste the font name */
+  font-family: "Roboto", sans-serif;
+}
+header {
+  text-align: center;
+  color: #999;
+  background-color: #111;
+  border-bottom: 1px solid #659916;
+  border-radius: 0 0 20px 20px;
+}
+
+header h1 {
+  margin: 0;
+  padding: 5px;
+}
+/* Game main section */
+#main h1 {
+  text-align: center;
+  margin: 15px 0;
+}
+
+.choose {
+  text-align: center;
+  margin: 25px auto;
+  font-size: 1.2em;
+  font-weight: bold;
+  border: 2px solid #7e067e;
+  color: #7e067e;
+  line-height: 2em;
+  border-radius: 20px;
+  width: 80%;
+  background-color: rgba(106, 190, 190, 0.5);
+}
+
+.image-container {
+  overflow: hidden; /* What will happen if the content overflows the element */
+  text-align: center;
+  margin: 0 auto;
+  max-width: 1000px;
+}
+.image-container img {
+  width: 200px;
+  margin: 20px;
+  display: inline-block;
+}
+img:hover {
+  cursor: pointer;
+}
+
+/* Button to start game */
+.play {
+  font-size: 2em;
+  cursor: pointer;
+  text-align: center;
+  margin: 20px auto;
+  padding: 5px;
+  width: 20%;
+  border: 3px groove rgba(255, 69, 0, 0.5);
+  border-radius: 25px;
+}
+.play:hover {
+  cursor: pointer;
+  background-color: rgba(255, 69, 0, 0.5);
+  color: #fff;
+}
+/* !!!!!!!!!!!!!!! may be used !!!!!!!!!!!!!!!!!!!!11 */
+
+.row {
+  display: flex;
+
+  justify-content: space-evenly;
+}
+.score {
+  text-align: center;
+  margin: 20px auto;
+}
+.notes,
+.choices {
+  margin: 20px;
+  text-align: center;
+}
+
+header div {
+  text-align: left;
+  font-size: 0.4em;
+  margin: 20px;
+}
+header div:hover {
+  font-size: 2em;
+}
